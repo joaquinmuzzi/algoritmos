@@ -10,6 +10,6 @@ int main(void){
 
 int random(){
     srand(time(NULL));
-    int rdm = (rand() % 7) + 1;
-    return rdm == 6 || rdm == 7 || rdm == 8 ? 6 : rdm;
+    int rdm = (rand() % 8) + 1;
+    return rdm > 5 ? 6 : rdm;
 }
