@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <time.h>
 
 void raices(double a, double b, double c){
     double discriminante = b * b - 4 * a * c;
