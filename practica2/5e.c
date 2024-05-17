@@ -7,7 +7,7 @@ void raices(double a, double b, double c){
     double raiz1 = ((-b - sqrt(discriminante))/ (2 * a));
     double raiz2 = ((-b + sqrt(discriminante))/ (2 * a));
 
-    printf("%f, %f", raiz1, raiz2);
+    printf("%d, %d", raiz1, raiz2);
 }
 
 int main(int argc, char *argv[]){
