@@ -6,13 +6,18 @@ programa.*/
 #include <stdlib.h>
 
 int main(int argc, char *argv[0]){
-  int n = argv[1];
+  //DECLARO VARIABLES
+  int n = atoi(argv[1]);
+  int fact = 1;
+  //SI EL INPUT ES MENOR A CERO TIRA ERROR
   if (n < 0){
     printf("Error\n");
     return 1;
   }
-  for (int i = n; i > 0; i++){
-    
+  //BUCLE QUE MULTIPLICA FACT POR EL ITERADOR i
+  for (int i = 1; i <= n; i++){
+    fact *= i;
+    printf("%i\n", fact);
   }
   return 0;
 }
