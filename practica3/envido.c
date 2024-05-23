@@ -1,0 +1,1 @@
+int envido(char p1, int v1, char p2, int v2, char p3, int v3)
