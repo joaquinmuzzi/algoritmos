@@ -5,9 +5,9 @@ int envido(char p1, int v1, char p2, int v2, char p3, int v3){
     // declaro la variable que va a tomar el valor del envido
     int resultado = 0;
 
-    // si ningun palo es igual imprime el menor valor
+    // si ningun palo es igual imprime el MAYOR valor
     if(p1 != p2 && p2 != p3 && p1 != p3){
-        resultado += v1 > v2 ? v2 : (v1 > v3 ? v3 : v1);
+        resultado += v1 < v2 ? v2 : (v1 < v3 ? v3 : v1);
         return resultado;
     }
 
