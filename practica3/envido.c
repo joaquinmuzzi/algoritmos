@@ -9,7 +9,7 @@ int envido(char p1, int v1, char p2, int v2, char p3, int v3){
     v1 = v1 >= 10 ? 0 : v1;
     v2 = v2 >= 10 ? 0 : v2;
     v3 = v3 >= 10 ? 0 : v3;
-    
+
     // si ningun palo es igual imprime el MAYOR valor
     if(p1 != p2 && p2 != p3 && p1 != p3){
         resultado += v1 < v2 ? v2 : (v1 < v3 ? v3 : v1);
@@ -28,7 +28,7 @@ int envido(char p1, int v1, char p2, int v2, char p3, int v3){
         resultado += v1 + v3;
 
     }
-    return resultado + 10;
+    return resultado + 20;
 }
 
 int main(int argc, char const *argv[]){
