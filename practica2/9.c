@@ -12,6 +12,6 @@ int suma_random(){
 }
 
 int main(void){
-    printf("%d", suma_random());
+    printf("%d\n", suma_random());
     return 0;
 }
