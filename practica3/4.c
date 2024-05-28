@@ -16,8 +16,8 @@ int main(int argc, char *argv[0]){
   //BUCLE QUE MULTIPLICA FACT POR EL ITERADOR i
   for (int i = 1; i <= n; i++){
     fact *= i;
-    printf("%i\n", fact);
   }
+  printf("%i\n", fact);
   return 0;
 }
 
