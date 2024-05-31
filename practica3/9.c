@@ -4,7 +4,7 @@ argumento entero del programa*/
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char *argv[]){
-    // eclaro la variable g, f  y temp que es el valor temporal del resultado de los dos anteriores
+    // Declaro la variable g, f  y temp que es el valor temporal del resultado de los dos anteriores
     int num = atoi(argv[1]);
     int g = 1;
     int f = 0;
