@@ -4,11 +4,11 @@ revés. Por ejemplo para la entrada 12345 debe imprimir 54321.*/
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char *argv[]){
-    int num = atoi(argv[1]);
-    int cifras = atoi(argv[2]);
-    for(int i = 0; i <= cifras; i++){
-      printf("%i", num % 10);
-      num %= 10;
-    }
-    return 0;
+  int num = atoi(argv[1]);
+  int cifras = atoi(argv[2]);
+  for(int i = 1; i <= cifras; i++){
+    printf("%i", num % 10);
+    num /= 10;
+  }
+  return 0;
 }
