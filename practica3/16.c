@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
       if(i == 1){
         printf("%i ", j);
       }else{
-        printf(i % j == 0 ? "* " : "  ");
+        printf(j % i == 0 || i % j == 0 ? "* " : "  ");
       }
     }
     printf("\n");
