@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wordle</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #word {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    #guess {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+<h1>Wordle</h1>
+<div id="word">?????</div>
+<input type="text" id="guess" maxlength="5" placeholder="Enter your guess">
+<button onclick="checkGuess()">Check</button>
+
+<script>
+    // Array of words to guess
+    var words = ["apple", "banana", "orange", "grape", "kiwi"];
+    // Choose a random word
+    var word = words[Math.floor(Math.random() * words.length)];
+    // Array to store the guessed letters
+    var guessedLetters = [];
+
+    // Function to check the guess
+    function checkGuess() {
+        var guess = document.getElementById("guess").value.toLowerCase();
+        if (guess.length !== 5 || !/^[a-z]+$/.test(guess)) {
+            alert("Please enter a valid 5-letter word.");
+            return;
+        }
+        if (guess === word) {
+            document.getElementById("word").innerText = word;
+            alert("Congratulations! You guessed the word.");
+        } else {
+            var result = "";
+            for (var i = 0; i < guess.length; i++) {
+                if (word.includes(guess[i])) {
+                    if (guess[i] === word[i]) {
+                        result += "<span style='color:green'>" + guess[i] + "</span>";
+                    } else {
+                        result += "<span style='color:yellow'>" + guess[i] + "</span>";
+                    }
+                } else {
+                    result += "<span style='color:red'>" + guess[i] + "</span>";
+                }
+            }
+            document.getElementById("word").innerHTML = result;
+        }
+        document.getElementById("guess").value = "";
+    }
+</script>
+</body>
+</html>
