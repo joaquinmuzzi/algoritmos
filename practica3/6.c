@@ -1,3 +1,5 @@
+/* Escribir un programa que acepte un argumento entero 𝑛, la cantidad de veces que el programa imprime “Hola
+mundo”. Dar el diagrama de flujo. */
 #include <stdio.h>
 #include <stdlib.h>
 

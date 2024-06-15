@@ -1,3 +1,6 @@
+/* Escribir un programa que decida si un entero positivo 𝑛 es primo o no. Un número es primo si es divisible sólo
+por uno y por sí mismo. Por ejemplo 7 es primo pero 33 no. Dar el diagrama de flujo */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

@@ -1,3 +1,5 @@
+/* Un programa que imprima el máximo de tres argumentos enteros 𝑎, 𝑏 y 𝑐. */
+
 #include <stdio.h>
 #include <stdlib.h>
 

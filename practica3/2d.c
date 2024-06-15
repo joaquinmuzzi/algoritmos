@@ -1,3 +1,4 @@
+/* Un programa acepta como argumento un número entero y decide si es positivo, negativo o cero. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

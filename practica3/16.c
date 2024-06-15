@@ -1,3 +1,5 @@
+/* Usar dos ciclos for anidados para imprimir un patrón en forma de tabla con asteriscos que indique si 𝑖 divide a
+𝑗 o 𝑗 divide a 𝑖. Usar un argumento entero 𝑛 para el tamaño de la tabla.  */
 #include <stdio.h>
 #include <stdlib.h>
 
