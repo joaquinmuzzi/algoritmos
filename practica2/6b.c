@@ -1,5 +1,5 @@
-/*Escribir un programa en C que reciba tres argumentos por consola y usando la desigualdad
-triangular imprima si es triángulo o no*/
+/* Escribir un programa en C que reciba tres argumentos por consola y usando la desigualdad
+triangular imprima si es triángulo o no */
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,4 +1,4 @@
-// Una función que devuelva el producto escalar entre dos vectores en el plano 
+/* Una función que devuelva el producto escalar entre dos vectores en el plano */ 
 #include <stdio.h>
 #include <stdlib.h>
 

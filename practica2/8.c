@@ -1,3 +1,5 @@
+/* Escribir un programa que simule tirar un dado “cargado”. Imprimir el resultado de tirar el dado. Tener en cuenta
+que la probabilidad de tirar un 1, 2, 3, 4 o 5 es de 1/8 y de tirar un 6 es de 3/8. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

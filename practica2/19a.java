@@ -1,3 +1,5 @@
+/* Una función que dibuje una casa centrada en el punto (𝑥, 𝑦). */
+
 void setup() {
   size(500, 500);
   float centerX = width*0.5;

@@ -1,4 +1,4 @@
-// Una función que acepte un año y decida si es bisiesto o no.
+/* Una función que acepte un año y decida si es bisiesto o no. */
 
 #include <stdio.h>
 #include <stdlib.h>

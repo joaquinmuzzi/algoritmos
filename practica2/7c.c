@@ -1,4 +1,4 @@
-// Una función que devuelva un entero aleatorio en el intervalo [0, 10].
+/* Una función que devuelva un entero aleatorio en el intervalo [0, 10]. */
 
 #include <stdio.h>
 #include <stdlib.h>

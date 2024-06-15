@@ -1,3 +1,6 @@
+/* Escribir un programa que imprima la suma de dos enteros aleatorios entre 1 y 6 como si estuvieras tirando dos
+dados. */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

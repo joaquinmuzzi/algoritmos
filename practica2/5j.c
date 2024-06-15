@@ -1,4 +1,4 @@
-// Una función que normalize un vector en el plano.
+/* Una función que normalize un vector en el plano. */
 
 #include <stdio.h>
 #include <stdlib.h>

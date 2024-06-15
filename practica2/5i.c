@@ -1,4 +1,4 @@
-//  Una función que devuelva el producto vectorial entre dos vectores en el espacio.
+/* Una función que devuelva el producto vectorial entre dos vectores en el espacio. */
 
 #include <stdio.h>
 #include <stdlib.h>

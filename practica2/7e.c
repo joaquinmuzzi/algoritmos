@@ -1,4 +1,4 @@
-// Una función que reciba dos enteros 𝑎 y 𝑏 y devuelva un entero aleatorio en el intervalo [𝑎, 𝑏).
+/* Una función que reciba dos enteros 𝑎 y 𝑏 y devuelva un entero aleatorio en el intervalo [𝑎, 𝑏). */
 
 #include <stdio.h>
 #include <stdlib.h>

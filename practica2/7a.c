@@ -1,3 +1,4 @@
+/* Una función que devuelva un entero aleatorio. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

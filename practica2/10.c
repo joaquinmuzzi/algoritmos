@@ -1,5 +1,5 @@
-// Escribir una función que acepte un entero 𝑏 y genere un número al azar 𝑟 en el intervalo [0, 36]. Si 𝑟 = 𝑏 entonces
-// devolver true, de lo contrario false.
+/* Escribir una función que acepte un entero 𝑏 y genere un número al azar 𝑟 en el intervalo [0, 36]. Si 𝑟 = 𝑏 entonces
+devolver true, de lo contrario false. */
 
 #include <stdio.h>
 #include <stdlib.h>

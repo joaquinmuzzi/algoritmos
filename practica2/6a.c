@@ -1,4 +1,4 @@
-// Una función que decida si un número entero 𝑏 es divisor de otro entero 𝑎.
+/* Una función que decida si un número entero 𝑏 es divisor de otro entero 𝑎. */
 
 #include <stdio.h>
 #include <stdlib.h>
