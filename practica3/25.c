@@ -9,11 +9,8 @@ int main(int argc, char *argv[]){
     printf("porfavor ingrese un entero mayor a 1");
     return 1; 
   }
-  for (int i = 2; i <= n; i++) {
-    if (i % 2 == 0) {
-      printf("%i\n", i);
-    }
-
+  for (int i = 2; i <= n; i += 2) {
+    printf("%i\n", i);
   }
   return 0;
 }
