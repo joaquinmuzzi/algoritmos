@@ -9,18 +9,18 @@ obtenemos la representación de 𝑛 en binario. */
 
 int main(int argc, char *argv[]){ 
   int n = atoi(argv[1]);
-  int potencia_mayor = 1;
-  int suma_de_potencias = 2;
-  for (int i = 2; i <= n; i *= 2) {
-    potencia_mayor = i;
+  int potencia_mayor = 2;
+  while (potencia_mayor <= n) {
+    potencia_mayor *= 2;
   }
-  int i = potencia_mayor / 2;
-  printf("1");
+  potencia_mayor /= 2;
 
-  for (; i >= 1; i /= 2) {
-    if(i + potencia_mayor <= n){
+  for (int i = potencia_mayor; i >= 1; i /= 2) {
+    if (n >= i){
       printf("1");
-    }else{
+      n -= i;
+    }
+    else {
       printf("0");
     }
   }
