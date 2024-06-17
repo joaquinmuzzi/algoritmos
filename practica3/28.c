@@ -7,10 +7,18 @@ obtenemos la representación de 𝑛 en binario. */
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]){ 
   int n = atoi(argv[1]);
-  for (int i = 512; i >= 1; i /= 2) {
-    if(n % i == 0){
+  int potencia_mayor = 1;
+  int suma_de_potencias = 2;
+  for (int i = 2; i <= n; i *= 2) {
+    potencia_mayor = i;
+  }
+  int i = potencia_mayor / 2;
+  printf("1");
+
+  for (; i >= 1; i /= 2) {
+    if(i + potencia_mayor <= n){
       printf("1");
     }else{
       printf("0");
