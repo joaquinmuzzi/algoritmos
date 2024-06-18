@@ -4,13 +4,13 @@ argumentos. Luego del primer cero ignora el resto de los argumentos */
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, char *argv[]){
-  int suma = 0;
+  int suma = 1;
   for (int i = 1; i < argc ; i++) {
     int input = atoi(argv[i]);
     if (!input) {
       break;
     }
-    suma += input;
+    suma *= input;
   }
   printf("%i\n", suma);
   return 0;
