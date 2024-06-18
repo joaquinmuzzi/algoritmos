@@ -17,16 +17,15 @@ int main(int argc, char *argv[]) {
 
   caraceca; //variable que deterina si gana o no tomando los valores 1 y 0
   ganadas = 0; //cantidad de experimentos ganados
-  cantidad_de_apuestas = 0;
+  cantidad_de_apuestas = 0; //cantidad de apuestas hechas en total
 
-  // cantidad de experimentos
+  // experimentos
   for (int i = 1; i <= tries; i++) {
   saldo = atoi(argv[1]);
-  apuesta = 1; //la cantidad que pone en cada apuesta
+  apuesta = 1; //la cantidad que pone cuando empieza a apostar
     // mientras su saldo sea mayor a 0 y no haya llegado a su objetivo
     while (saldo >= 0 && saldo <= goal) {
       caraceca = rand() % 2; // caraceca toma un valor aleatorio entre 1 y 0
-      printf("Su apuesta es de: %i\nSu saldo es de: %d\n\n", apuesta, saldo);
 
       // si gana entonces se le suma lo que apostó a su saldo y duplica su apuesta
       if(caraceca){
@@ -41,17 +40,10 @@ int main(int argc, char *argv[]) {
 
       cantidad_de_apuestas++;
     }
-    if(saldo >= goal){
-      ganadas++;
-      printf("ganó\n");
-    }
-    else{
-      printf("perdió\n");
-    }
+    ganadas += saldo >= goal ? 1 : 0; //si ganó entonces le suma 1 a ganadas
   }
-  printf("ganadas: %d\ntries: %d\ncantidad de apuestas: %d\n\n", ganadas, tries, cantidad_de_apuestas);
   probabilidad_de_ganar = ((double)ganadas / tries) * 100;
   promedio_de_apuestas = (double)cantidad_de_apuestas / tries;
-  printf("%.2f%% de victorias\nPromedio de apuestas: %.2f\n", probabilidad_de_ganar, promedio_de_apuestas);
+  printf("%.0f%% de victorias\nPromedio de apuestas: %.2f\n", probabilidad_de_ganar, promedio_de_apuestas);
   return 0;
 }
