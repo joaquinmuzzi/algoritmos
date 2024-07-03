@@ -8,7 +8,7 @@ for(int i = 5; i < width/2; i += 10){
   line(centroHorizontal-i,centroVertical-i,centroHorizontal+i,centroVertical-i);
   line(centroHorizontal+i,centroVertical-i,centroHorizontal+i,centroVertical+i);
 }
-for(int j = 10; j < width/2; j += 10){
-  line(centroHorizontal+j-5,centroVertical+j-5,centroHorizontal-j-5,centroVertical+j-5);
-  line(centroHorizontal-j-5,centroVertical+j-5,centroHorizontal-j-5,centroVertical-j-5);
+for(int j = 5; j < width/2; j += 10){
+  line(centroHorizontal+j,centroVertical+j,centroHorizontal-j-10,centroVertical+j);
+  line(centroHorizontal-j-10,centroVertical+j,centroHorizontal-j-10,centroVertical-j-10);
 }
