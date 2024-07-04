@@ -5,11 +5,8 @@ int n = 5;
 // Tomo la distancia entre cada línea
 int distanciaX = width / n;
 int distanciaY = height / n;
-// Dibujo líneas verticales
+// Dibujo líneas
 for(int i = distanciaX; i < width; i += distanciaX){
   line(i, 0, i, height);
-}
-// Dibujo líneas horizontales
-for(int j = distanciaY; j < height; j += distanciaY){
-  line(0, j, width, j);
+  line(0, i, width, i);
 }
