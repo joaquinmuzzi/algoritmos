@@ -8,17 +8,20 @@ void drawTriangle(float x, float y, float side, float direction){
   triangle(x1, y1, x2, y2, x3, y3);
 }
 void setup() {
-  size(1000, 1000);
+  size(500, 500);
   int n = 10;
   float x = 0.0;
-  float y = (float)height;
-  float side = 1000.0;
+  float y = height;
+  float side = 500.0;
   float direction = -1.0;
   drawTriangle(x, y, side, -direction);
+  fill(0);
   for(int i = 1; i <= n; i++){
-    y -= (side * sin(60));
-    x += side / 2.0;
     side /= 2.0;
+    x += side / 2.0;
+    y -= (sqrt(3) * side) / 2;
+    print("y vale ", y, ", x vale ", x, ", side vale ", side, "\n");
     drawTriangle(x, y, side, direction);
+    fill(0);
   }
 }
