@@ -9,7 +9,7 @@ int y1 = height/2;
 int x2 = random;
 int direccion = -1;
 int y2 = y1 + (random*direccion);
-for(int i = 1; i <= width; i += x2){
+for(int i = 0; i <= width; i = x1){
   random = round(random(101));
   line(x1, y1, x2, y2);
   direccion *= -1;
