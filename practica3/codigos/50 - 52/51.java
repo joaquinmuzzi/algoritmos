@@ -6,10 +6,7 @@ rotate() y translate(). El tamaño de la ventana es de 400 × 400 píxeles. */
 size(400, 400);
 int n = 21;
 int rotacion = 90 / (n/4);
-if(n < 4 && (n % 4 != 0)){
-  exit();
-  print("Hola soy un exit();");
-}
+if(n < 4 || (n % 4 != 0)) exit();
 translate(width/2, height/2);
 for(int i = 4; i <= n; i += 4){
   fill(0);
