@@ -3,12 +3,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#define N 2
 
 int main() {
-  int N = 2;
+  srand(time(NULL));
+  int vector1[N];
+  int vector2[N];
+  int producto = 0;
   for (int i = 0; i < N; i++) {
-    /* code */
+    vector1[i] = rand() % 100;
+    vector2[i] = rand() % 100;
+    producto += vector1[i] * vector2[i];
   }
-  
+  printf("El producto entre (%i, %i) y (%i, %i) es ", vector1[0], vector1[1], vector2[0], vector2[1]);
+  printf("%d\n", producto);
   return 0;
 }
