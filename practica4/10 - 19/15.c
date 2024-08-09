@@ -1,3 +1,4 @@
+/* Escribir un programa que reciba un string como argumento y decida si la palabra es un palíndromo o no. */
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
