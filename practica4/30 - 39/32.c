@@ -5,25 +5,61 @@ puede dar un paso a la vez a la izquierda, derecha, arriba o abajo. Pero no pued
 la matriz que representa la caminata al terminar. */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char *argv[]) {
+void crear_tablero(int n, int tablero[n][n]) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++){
+      tablero[i][j] = 0;
+    }
+  }
+  tablero[n/2][n/2] = 1;
+}
+
+void caminar(int n, int tablero[n][n]) {
+
+  int i = n/2;
+  int j = n/2;
+  int numero_de_paso = 2;
+  while (i < n && i >= 0 && j < n && j >= 0) {
+    int paso = rand() % 4;
+
+    int ni = i;
+    int nj = j;
+    
+    if (paso == 0) nj--;
+    if (paso == 1) ni++;
+    if (paso == 2) nj++;
+    if (paso == 3) ni--;
+
+    if (ni < 0 || ni >= n || nj < 0 || nj >= n) break;
+    if (tablero[ni][nj] > 0) continue;
+
+    tablero[ni][nj] = numero_de_paso;
+
+    i = ni;
+    j = nj;
+    numero_de_paso++;
+  }
+}
+
+void imprimir_tablero(int n, int tablero[n][n]) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      printf("%i\t", tablero[i][j]);
+    }
+    printf("\n\n\n");
+  }
+}
+
+int main(void) {
   srand(time(NULL));
   int caminata[15][15];
-  for (int i = 0; i < 15; i++) {
-    for (int j = 0; j < 15; j++){
-     caminata[i][j] = 0; 
-    }
-  }
 
-  while (posicion <) {
-    int paso = rand() % 4;
-    if (paso == 0) {
-      caminata[i]
-    }
-    
-  }
-  
+  crear_tablero(15, caminata);
+  caminar(15, caminata);
+  imprimir_tablero(15, caminata);
   
   return 0;
 }
