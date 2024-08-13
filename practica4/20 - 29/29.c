@@ -35,9 +35,8 @@ int main(int argc, char *argv[]) {
   
   for (int i = 0; i < n; i++) {
     mezclar_mazo(mazo, 30);
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
       printf("%s\n", mazo[i]);
-    }
     printf("\n");
   }
   return 0;

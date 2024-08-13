@@ -3,19 +3,23 @@ Usar la probabilidad 𝑝 para determinar si un casillero tiene o no una mina. *
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
+  srand(time(NULL));
   int p = atoi(argv[1]);
   int n = atoi(argv[2]);
 
-  int *tablero[n][n];
+  int tablero[n][n];
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++){
-      int mina = rand() % (100/p);
-      tablero[i][j] = mina;
+      if ((rand() % 100) < p)
+        tablero[i][j] = -1;
+      else
+        tablero[i][j] = 0;
+      printf("%i\t", tablero[i][j]);
     }
-    
+    printf("\n\n\n");
   }
-  
   return 0;
 }
