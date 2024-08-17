@@ -4,33 +4,55 @@ un cuadrado mágico de 3 × 3. Un cuadrado mágico de 3 × 3 es un arreglo de lo
 tal que las filas, las columnas y las dos diagonales suman 15. Existen 8 combinaciones posibles. */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
-void generar_matriz(matriz[3][3]) {
+int existe_en_matriz(int matriz[3][3], int num) {
+    for (size_t i = 0; i < 3; i++) {
+        for (size_t j = 0; j < 3; j++) {
+            if (matriz[i][j] == num) return 1;
+        }
+    }
+    return 0;
+}
+
+void generar_matriz(int matriz[3][3]) {
   for(size_t i = 0; i < 3; i++) {
     for(size_t j = 0; j < 3; j++) {
-      int n = (rand() % 9) + 1;
+      int n;
+      do {
+        n = (rand() % 9) + 1;
+      } while(existe_en_matriz(matriz, n));
       matriz[i][j] = n;
     }
   }
 }
 
-int verificar_matriz() {
-  int resultados[8];
-  resultados[0] = matriz[0][0] + matriz[0][1] + matriz[0][2];
-  resultados[1] = matriz[1][0] + matriz[1][1] + matriz[1][2];
-  resultados[2] = matriz[2][0] + matriz[2][1] + matriz[2][2];
-  resultados[2] = matriz[0][0] + matriz[0][1] + matriz[0][2];
-  resultados[3] = matriz[0][0] + matriz[0][1] + matriz[0][2];
-  
-  for(size_t i = 0; i < 8; i++) {
-    if(resultados[i] != 15)
-      return 0;
+int verificar_matriz(int matriz[3][3]) {
+  // verifico filas y columnas
+  for (size_t i = 0; i < 3; i++) {
+    int sf = 0;
+    int sc = 0;
+    for (size_t j = 0; j < 3; j++) {
+      sf += matriz[i][j];
+      sc += matriz[j][i];
+    }
+    if (sf != 15 || sc != 15) return 0;
   }
+
+  // verifico diagonales
+  int sd1 = 0;
+  int sd2 = 0;
+  for (size_t i = 0; i < 3; i++) {
+    sd1 += matriz[i][i];
+    sd2 += matriz[i][2 - i];
+  }
+  if (sd1 != 15 || sd2 != 15) return 0;
+
   return 1;
 }
 
-imprimir_matriz(matriz) {
+void imprimir_matriz(int matriz[3][3]) {
   for(size_t i = 0; i < 3; i++) {
     for(size_t j = 0; j < 3; j++) {
       printf("%i\t", matriz[i][j]);
@@ -40,13 +62,15 @@ imprimir_matriz(matriz) {
 }
 
 int main(int argc, char *argv[]) {
-  srand(time(NULL));
-  int matriz[3][3];
-  generar_matriz(matriz);
-  int es_valido = verificar_matriz(matriz);
-  while(!es_valido){
-    valido = verificar_matriz(matriz);
-  }
-  imprimir_matriz(matriz);
-  return 0;
+    srand(time(NULL));
+    int matriz[3][3];
+    int es_valido;
+
+    do {
+        generar_matriz(matriz);
+        es_valido = verificar_matriz(matriz);
+    } while(!es_valido);
+    
+    imprimir_matriz(matriz);
+    return 0;
 }
