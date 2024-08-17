@@ -15,12 +15,20 @@ void crear_sudoku(int sudoku[9][9]) {
   }
 }
 
-bool unico_linea(int n, int fila[9]) {
-  int repetidos = 0;
-  for (int i = 0; i < 9; i++) {
-    repetidos += (n == fila[i]) ? 1 : 0;
-  }
-  return (repetidos > 1) ? false : true;
+int verificar_cuadrado(int sudoku[9][9], int fila_inicio, int col_inicio) {
+    int nums[9] = {0};
+
+    for (size_t i = 0; i < 3; i++) {
+        for (size_t j = 0; j < 3; j++) {
+            int num = sudoku[fila_inicio + i][col_inicio + j];
+            if (num < 1 || num > 9 || nums[num - 1] == 1) {
+                return 0;  // Número fuera de rango o duplicado
+            }
+            nums[num - 1] = 1;
+        }
+    }
+    
+    return 1;  // Todos los números del 1 al 9 están presentes sin repeticiones
 }
 
 bool es_valido(int sudoku[9][9]) {
@@ -38,7 +46,7 @@ bool es_valido(int sudoku[9][9]) {
     }
   }
 
-  if (repetidos > 1) {
+  if (repetidos > 1 || verificar_cuadrado != 1) {
     return false;
   }
   else {
