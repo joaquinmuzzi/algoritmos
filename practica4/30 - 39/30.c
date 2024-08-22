@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         tablero[i][j] = -1;
       else
         tablero[i][j] = 0;
-      printf("%i\t", tablero[i][j]);
+      printf("%d\t", tablero[i][j]);
     }
     printf("\n\n\n");
   }
