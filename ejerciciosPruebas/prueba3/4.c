@@ -10,8 +10,8 @@ double power(double x, int n){
     return resultado;    
 }
 int main(int argc, char *argv[]){
-    int x = atoi(argv[1]);
-    int y = atoi(argv[2]);
-    printf("%.2f", power(x, y));
-    return 0;
+int x = atoi(argv[1]);
+int y = atoi(argv[2]);
+printf("%.2f", power(x, y));
+return 0;
 }
