@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
 	srand(time(NULL));
 	int random = rand() % 1000 + 1;
 	int n = 0;
+	int intentos = 0;
 	printf("Adivina un numero entre 1 y 1000: ");
 	scanf("%d", &n);
 	while (n != random) {
@@ -21,8 +22,9 @@ int main(int argc, char *argv[]) {
 		if (n < random) {
 			printf("Es mayor: ");
 			scanf("%d", &n);
-		} 
+		}
+		intentos++;
 	}
-	printf("que bueno");
+	printf("tardaste %d intentos, ay mi gordito...", intentos);
 	return 0;
 }
