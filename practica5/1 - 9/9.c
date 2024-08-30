@@ -12,11 +12,12 @@ int main(int argc, char *argv[]) {
 	int n = 0;
 	int intentos = 0;
 	printf("Adivina un numero entre 1 y 1000: ");
-  int es_numero = scanf("%d", &n);
+  int value = scanf("%d", &n);
   while (1) {
-    if ((n < 1) || (n > 1000) || es_numero != 1) {
+    if ((n < 1) || (n > 1000) || value != 1) {
       printf("otra vez... ");
-      es_numero = scanf("%d", &n);
+      value = scanf("%d", &n);
+	  getchar();
     } else {
       break;
     }
