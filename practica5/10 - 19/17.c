@@ -5,21 +5,18 @@
 
 int main(int argc, char const *argv[]) {
   FILE *fp = fopen(argv[1], "r");
-  long position;
-  int count_lines = 0;
-  int c;
-
-  fseek(fp, 0, SEEK_END);
-  position = ftell(fp);
-
-  while (count_lines < 10) {
-    fseek(fp, --position, SEEK_SET);
-    c = getc(fp);
-    printf("%c", c);
-    
-    if (c == '\n') count_lines++;
-  }
-
+  int c, lines = 0;
+  int n = atoi(argv[2]);
+  while ((c = fgetc(fp)) != EOF)
+    if (c == '\n') lines++;
   fclose(fp);
-  return 0;
+  char line[100];
+  fp = fopen(argv[1], "r");
+  for (int i = 0; i < lines; i++) {
+    fgets(line, 100, fp);
+    if (i >= lines - n)
+      printf("%s", line);
+  }
+  fclose(fp);
+  return 0;  
 }
