@@ -1,0 +1,8 @@
+Barcelona,38,26,8,4
+RealMadrid,38,24,9,5
+AtleticodeMadrid,38,23,10,5
+SevillaFC,38,18,12,8
+ValenciaCF,38,14,10,14
+AthleticClub,38,15,8,15
+RealBetis,38,17,7,14
+VillarrealCF,38,16,9,13
