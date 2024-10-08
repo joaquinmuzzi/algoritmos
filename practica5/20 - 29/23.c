@@ -9,11 +9,15 @@ int main(int argc, char *argv[]) {
   system("cls");
   char buffer[100];
   int nota_1, nota_2;
+  double promedio;
   char nombre[15];
   FILE *fp = fopen(argv[1], "r");
   
-  while (fscanf(fp, "%d %d %s", &nota_1, &nota_2, nombre) == 3)
-    printf("%s\t%d\t%d\t%.2f\n", nombre, nota_1, nota_2, (double)((nota_1 + nota_2) / 2));
+  while (fscanf(fp, "%d %d %s", &nota_1, &nota_2, nombre) == 3){
+    double promedio = (double)(nota_1 + nota_2) / 2;
+    printf("%s\t%d\t%d\t%.2f\n", nombre, nota_1, nota_2, promedio);
+  }
+
   
   fclose(fp);
   return 0;
