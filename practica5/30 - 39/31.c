@@ -9,6 +9,23 @@ resultado de este proceso a salida estándar. */
 
 int main(int argc, char *argv[]) {
   FILE *fp = fopen(argv[1], "r");
-
+  char archivo[1000];
+  int i = 0;
+  char c;
+  while ((c = getc(fp)) != EOF && i < 999) archivo[i++] = c;
+  archivo[i] = '\0';
+  for (int i = 0; i < 999 && archivo[i] != '\0'; i++) {
+    int contador = 0;
+    while (archivo[i] == archivo[i + 1]) {
+      contador++;
+      i++;
+    }
+    if (contador > 0) {
+      printf("%c%d", archivo[i], contador);
+      continue;
+    }
+    putchar(archivo[i]);
+  }
+  fclose(fp);
   return 0;
 }
