@@ -18,7 +18,6 @@ int main(void) {
 	int a[10];
 	for (int i = 0; i < n; i++) {
 		a[i] = i;
-		printf
 	}
 	
 	mas_dos(a, n);
