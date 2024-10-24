@@ -6,12 +6,12 @@ función? */
 #include <stdlib.h>
 
 int sum(int n) {
-    if(n == 0) return 0;
-    return sum(n-1) + n;
+  if(n == 0) return 0;
+  return sum(n-1) + n;
 }
 
 int main(int argc, char *argv[]) {
-    int n = atoi(argv[1]);
-    printf("%d", sum(n));
-    return 0;
+  int n = atoi(argv[1]);
+  printf("%d", sum(n));
+  return 0;
 }
