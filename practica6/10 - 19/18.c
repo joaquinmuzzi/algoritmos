@@ -10,10 +10,7 @@ int swap(int n, int suma) {
 
 int main(int argc, char *argv[]) {
   int a = atoi(argv[1]);
-  int m = 0;
-
-  printf("%d", swap(a, m));
-
+  printf("%d", swap(a, 0));
   return 0;
 }
 
