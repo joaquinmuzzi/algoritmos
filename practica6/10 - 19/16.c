@@ -1,3 +1,5 @@
+/* Escribir una función recursiva en C int power(int a, int n) que devuelva 𝑎^𝑛 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
