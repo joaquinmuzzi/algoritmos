@@ -9,7 +9,7 @@
 
 int to_gray(int n, int gray) {
   if ( n < 1 ) return gray;
-  return to_gray(n/10, (gray*10) + (n%10 ^ (n/10)%10));
+  return to_gray(n/10, (gray*10) + (n%10 ^ (n/10)%10)); // no me pidas que te explique esta línea
 }
 
 int main(int argc, char *argv[]) {

@@ -13,5 +13,3 @@ int main(int argc, char *argv[]) {
   printf("%d", swap(a, 0));
   return 0;
 }
-
-
