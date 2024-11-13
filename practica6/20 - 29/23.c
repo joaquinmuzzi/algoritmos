@@ -1,3 +1,5 @@
+/* Escribir una función recursiva en C para imprimir un array. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
