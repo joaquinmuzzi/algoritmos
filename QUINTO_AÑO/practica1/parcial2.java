@@ -8,6 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int opcion;
+        final int cotizacion = 1234;
 
 
         do {
@@ -47,6 +48,7 @@ public class Main {
 
                     break;
                 case 4:
+                    System.out.println("La cotización del dólar a la fecha " + fecha + " es " + cotizacion)
                     System.out.println("Tenes " + saldo[1] + " dolares");
                     break;
                 case 5:
