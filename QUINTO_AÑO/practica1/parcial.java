@@ -3,7 +3,7 @@
 package holamundo;
 import java.util.Scanner;
 
-public class Main {
+public class main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -20,6 +20,8 @@ public class Main {
             if(input1.equals(usuario) && input2.equals(contra)) {
                 System.out.println("CORRECTO");
                 break;
+            } else if (input2.length() < 6) {
+            	System.out.println("La contraseña tiene que tener al menos 6 caracteres");
             } else {
                 System.out.println("NO TE CONOZCO");
             }
